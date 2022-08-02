@@ -203,6 +203,7 @@ label{
 .service-card img{
   width: 70px;
   height: 70px;
+  fill: #000;  
 }
 
 .service-text{
@@ -377,6 +378,7 @@ label{
     border: transparent;
     border-bottom: 1px solid #bfbfbf;
     padding: 0.5rem 1rem;
+    background: #fff;  
   }
   
   textarea{
@@ -387,6 +389,7 @@ label{
     margin-bottom: 10px;
     padding: 0.5rem 1rem;
     resize: none;
+    background: #fff;  
   }
   
   ::placeholder{
