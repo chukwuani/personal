@@ -13,7 +13,7 @@ function vanish(){
         setTimeout(() =>main.style.opacity = 1, 50);
         
 
-    }, 1000);
+    }, 2000);
     
 }
 
