@@ -898,7 +898,7 @@ label{
   border-radius: .3rem;
   background: var(--main-color);
   position: fixed;
-  left: 90vw;
+  left: 80vw;
   top: 90vh;
   display: none;
   align-items: center;
