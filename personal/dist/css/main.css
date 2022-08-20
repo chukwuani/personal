@@ -1254,7 +1254,6 @@ button{
 
 button:hover{
   transform: scale(1);
-  pointer-events: none;
   background: var(--sec-color);
 }
 
