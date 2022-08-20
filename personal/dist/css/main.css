@@ -1253,7 +1253,7 @@ button{
 }
 
 button:hover{
-  transform: scale(0);
+  transform: scale(1.0.8);
   background: var(--sec-color);
 }
 
