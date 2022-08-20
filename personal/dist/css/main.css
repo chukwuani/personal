@@ -327,7 +327,7 @@ label{
 .second-work{
   display: flex;
   max-width: 900px;
-  background: #fdfbfb;
+  background: #f5f5f5;
   margin-bottom: 5rem;
   transition: 0.50s ease-in-out;
   border-radius: .3rem;
