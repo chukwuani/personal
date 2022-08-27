@@ -92,7 +92,7 @@
                 <p>A simple bodycare landing page for my client, converting customers by collecting data and adding to a mailing system. 
                     Exhibits a nice and minimalistic design whilst still being functional.</p>
 
-                   <a href="https://bodycareng.netlify.app"><h3><span>Learn More</span></h3></a>
+                   <a href="bodycareng.netlify.app"><h3><span>Learn More</span></h3></a>
                    
                  </div>
                
@@ -161,7 +161,7 @@
             <div class="contact-text">
                 <h2 class="h2-text">Get in <span class="inverted">touch</span></h2>
                 <p class="p-text">You can contact us from here, you can write to us, 
-                    call us +2347030610127 or visit our social media, we will gladly assist you.</p>
+                    call us <a class="tel" href="tel:+2347030610127">+2347030610127</a> or visit our social media, we will gladly assist you.</p>
             </div>
 
             <div class="form-container">
@@ -170,19 +170,23 @@
 
                 <div class="form-main">
                     <form name="contact" data-netlify="true" method="post" onsubmit="submit">
-                        <label class="label" for="">Name</label>
-                        <input type="text" name="name" required>
+                
+                        <input class="input" type="text" name="name" required >
+                        <label class="label">Name</label>
         
-                        <label class="label"  for="">Email</label>
-                        <input type="email" name="email" required>
+                        
+                        <input class="input" type="email" name="email" required  >
+                        <label class="label" >Email</label>
         
-                        <label class="label"  for="">Phone Number</label>
-                        <input type="tel" name="number" required>
+                        
+                        <input class="input" type="tel" name="number" required >
+                        <label class="label" >Phone Number</label>
 
-                        <label class="label"  for="">Message</label>
+                        
                         <textarea name="message"></textarea>
+                        <label class="message" >Message</label>
         
-                        <button type="submit">Message</button>
+                        <button  type="submit">Message</button>
                     </form>
 
                  <div class="contact-socials">
