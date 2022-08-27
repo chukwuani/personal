@@ -35,6 +35,10 @@ body{
   transition: 1s ease-in-out;
 }
 
+.tel{
+   color: var(--sec-color);
+}
+
 .scroll{
   height: 40px;
   width: 40px;
