@@ -485,8 +485,13 @@ label{
     position: relative;
     box-shadow: none;
   }
+
+  ::placeholder{
+    font-size: .8rem;
+    font-family:  'Comfortaa', cursive;
+  }
   
-  .label{
+/*   .label{
     font-size: .9rem;
     font-family:  'Comfortaa', cursive;
     display: block;
@@ -496,9 +501,9 @@ label{
     transform: translateY(-90px);
     transition: all 500ms ease-in-out;
     opacity: 0.8;
-  }
+  } */
 
-  .message{
+/*   .message{
     font-size: .9rem;
     font-family:  'Comfortaa', cursive;
     display: block;
@@ -508,7 +513,7 @@ label{
     transform: translateY(-140px);
     transition: all 500ms ease-in-out;
     opacity: 0.8;
-  }
+  } */
   
   
   textarea{
