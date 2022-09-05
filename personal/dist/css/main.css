@@ -19,7 +19,17 @@ body{
     animation-timing-function: ease;
 }
 
-.scroll-down{
+main{
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in;
+  animation-name: mybody;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  position: relative;
+}
+
+/* .scroll-down{
   height: 50px;
   width: 50px;
   border-radius: .3rem;
@@ -33,11 +43,8 @@ body{
   cursor: pointer;
   animation: bounce 1s alternate ease-in-out infinite;
   transition: 1s ease-in-out;
-}
+} */
 
-.tel{
-   color: var(--sec-color);
-}
 
 .scroll{
   height: 40px;
@@ -46,20 +53,8 @@ body{
   transform: rotateX(180deg);
 }
 
-
-
 span{
     color: var(--main-color);
-}
-
-main{
-  opacity: 0;
-  display: none;
-  transition: opacity 1s ease-in;
-  animation-name: mybody;
-  animation-duration: 3s;
-  animation-timing-function: ease;
-  position: relative;
 }
 
 .loader{
@@ -74,27 +69,6 @@ main{
   z-index: 99999999;
 }
 
-.vanish{
-  animation: disappear 1s forwards;
-}
-
-@keyframes disappear{
-   0%{
-      opacity: 1;
-      visibility: visible;
-     } 
-  100%{
-   opacity: 0;
-   visibility: hidden;
-  }
-}
-
-
-.footer-copy{
-    color: #000;
-    text-align: center;
-    /* margin: 3rem; */
-}
 
 ::-webkit-scrollbar{
    display: none;
@@ -112,6 +86,23 @@ main{
     filter: invert(1) hue-rotate(180deg);
   }
 
+
+.vanish{
+  animation: disappear 1s forwards;
+}
+
+
+@keyframes disappear{
+   0%{
+      opacity: 1;
+      visibility: visible;
+     } 
+  100%{
+   opacity: 0;
+   visibility: hidden;
+  }
+}
+
   @keyframes mybody{
     from{
       opacity: 0;
@@ -124,6 +115,8 @@ main{
   @keyframes bounce{
     25%{transform: scale(0.8,1.1);}
 }
+
+
 /*header style*/
 header{
     display: flex;
@@ -173,6 +166,17 @@ label{
 } 
 
 .nav-item:hover::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+  display: block;
+  background: var(--sec-color);
+}
+
+.active::before{
   content: '';
   position: absolute;
   height: 2px;
@@ -301,6 +305,19 @@ label{
   line-height: 2rem;
 }
 
+/* tools and skills */
+.tools{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tools img{
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
 
 /* portfolio */
 .portfolio-text{
@@ -391,6 +408,14 @@ label{
 .text h3{
   margin-top: 1rem;
 }
+
+.link{
+  display: flex;
+  gap: 1rem;
+}
+
+
+
 /*about css*/
 .about-main{
     display: flex;
@@ -454,6 +479,7 @@ label{
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    margin-left: 2rem;
   }
   
   form{
@@ -466,13 +492,13 @@ label{
   }
   
   .mansplaining{
-    width: 40%;
-    height: 100%;
+    width: 50%;
+    height: auto;
     object-fit: contain;
   }
 
   .input{
-    max-width: 100%;
+    max-width: 500px;
     height: 60px;
     border: transparent;
     background: transparent;
@@ -481,14 +507,23 @@ label{
     padding: 0.5rem 1rem;
     resize: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: relative;
     box-shadow: none;
+    font-family:  'Comfortaa', cursive;
   }
 
   ::placeholder{
-    font-size: .8rem;
+    font-size: 0.9rem;
     font-family:  'Comfortaa', cursive;
+  }
+
+  .input:focus{
+    border-bottom: 1px solid #E7B360;
+  }
+
+  textarea:focus{
+    border-bottom: 1px solid #E7B360;
   }
   
 /*   .label{
@@ -517,7 +552,7 @@ label{
   
   
   textarea{
-    max-width: 100%;
+    max-width: 500px;
     height: 140px;
     border: transparent;
     border-bottom: 1px solid #bfbfbf;
@@ -525,13 +560,15 @@ label{
     padding: 0.5rem 1rem;
     resize: none;
     outline: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    font-family:  'Comfortaa', cursive;
   }
   
   
   button{
     display: inline-block;
     height: 60px;
+    max-width: 500px;
     padding: 9px 30px;
     background: var(--main-color);
     border: none;
@@ -543,11 +580,12 @@ label{
     transition: ease .50s;
     font-family: 'Comfortaa', cursive;
     margin-top: 20px;
+    cursor: pointer;
+    animation: bounce 1s alternate infinite ease-in-out;
   }
   
   button:hover{
     background: var(--sec-color);
-    transform: scale(1.1);
   }
   
   .contact-socials{
@@ -563,10 +601,21 @@ label{
     margin-bottom: 20px;
   }
 
+  .tel{
+    color: var(--sec-color);
+ }
+
+  /* footer */
   footer{
     margin-top: 3rem;
     margin-bottom: 2rem;
   }
+
+  .footer-copy{
+    color: #000;
+    text-align: center;
+    /* margin: 3rem; */
+}
 
 @media screen and (max-width: 768px) {
     body{
@@ -1222,8 +1271,9 @@ label{
   flex-direction:column;
   align-items: center;
   justify-content: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  margin: 0;
 }
 
 
@@ -1239,13 +1289,6 @@ form{
   viewport-fit:"0 0 865.76 206.89";
   height: 306.89px;
   width: 100vw;
-}
-input{
-  margin-bottom: 5px;
-  height: 50px;
-  border: transparent;
-  border-bottom: 1px solid #bfbfbf;
-  padding: 0.5rem 1rem;
 }
 
 textarea{

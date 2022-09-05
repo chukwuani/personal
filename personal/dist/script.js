@@ -17,6 +17,7 @@ function vanish(){
     
 }
 
+
 // //Get the button
 // var mybutton = document.querySelector(".scroll-down");
 
