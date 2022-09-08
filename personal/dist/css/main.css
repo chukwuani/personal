@@ -1,3 +1,5 @@
+/* VARIABLES AND OTHER STUFFS */
+
 *{
     padding: 0;
     margin: 0;
@@ -117,7 +119,7 @@ span{
 }
 
 
-/*header style*/
+/*HEADER STYLE*/
 header{
     display: flex;
     height: 4rem;
@@ -212,7 +214,7 @@ label{
 }
 
 
-/*home css*/
+/*HOME STYLE*/
 .main-text{
     font-family: 'Comfortaa', cursive;
     font-size: 5rem;
@@ -260,7 +262,7 @@ label{
 }
 
 
-/* service */
+/* SERVICE STYLE */
 .service-section{
   display: flex;
   flex-direction: column;
@@ -305,7 +307,7 @@ label{
   line-height: 2rem;
 }
 
-/* tools and skills */
+/* TOOLS AND SKILLS */
 .tools{
   display: flex;
   align-items: center;
@@ -319,7 +321,7 @@ label{
 }
 
 
-/* portfolio */
+/* PORTFOLIO STYLE */
 .portfolio-text{
   font-size: 2rem;
   margin-top: 5rem;
@@ -416,7 +418,7 @@ label{
 
 
 
-/*about css*/
+/* ABOUT STYLE */
 .about-main{
     display: flex;
     align-items: center;
@@ -444,7 +446,7 @@ label{
 }
 
 
-/* contact */
+/* CONTACT STYLE */
 .h2-text{
     text-align: center;
     font-size: 2rem;
@@ -555,11 +557,13 @@ label{
     max-width: 500px;
     height: 140px;
     border: transparent;
+    background: transparent;
     border-bottom: 1px solid #bfbfbf;
     margin-bottom: 10px;
     padding: 0.5rem 1rem;
     resize: none;
     outline: none;
+    box-shadow: none;
     font-size: 0.9rem;
     font-family:  'Comfortaa', cursive;
   }
@@ -605,7 +609,7 @@ label{
     color: var(--sec-color);
  }
 
-  /* footer */
+  /* FOOTER STYLE*/
   footer{
     margin-top: 3rem;
     margin-bottom: 2rem;
