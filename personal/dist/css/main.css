@@ -382,14 +382,14 @@ label{
 
 .content img{
   width: 50%;
-  height: 100%;
+  height: 420px;
   object-fit: cover;
   border-radius: .3rem;
 }
 
 .second-content img{
   width: 50%;
-  height: 100%;
+  height: 420px;
   object-fit: cover;
   border-radius: .3rem;
 }
