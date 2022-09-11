@@ -13,7 +13,7 @@ function vanish(){
         setTimeout(() =>main.style.opacity = 1, 50);
         
 
-    }, 2000);
+    }, 50);
     
 }
 
@@ -63,3 +63,19 @@ function vanish(){
 //     document.execCommand('copy');
 //     alert(window.getSelection().toString());
 //   }
+
+const left = document.querySelector(".left")
+const right = document.querySelector(".right")
+const portfolio = document.querySelector(".portfolio-main")
+
+left.onclick = function(){
+    portfolio.style.cssText += "transform: translatex(0px);";
+}
+
+right.onclick = function(){
+    portfolio.style.cssText= "transform: translatex(-1018px);";
+}
+
+
+
+
