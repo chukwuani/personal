@@ -13,9 +13,31 @@ function vanish(){
         setTimeout(() =>main.style.opacity = 1, 50);
         
 
-    }, 50);
+    }, 1500);
     
 }
+
+const loadBtn = document.querySelector(".load-more");
+const works = document.querySelectorAll(".load")
+let currentItem = 0;
+
+loadBtn.addEventListener('click', function(){
+    for(var i = currentItem; i < currentItem + 3; i++){
+        if(works[i]){
+            works[i].style.display = 'block';
+        }
+    }
+
+    currentItem += 0;
+    
+        if(currentItem <= works.length){
+            loadBtn.style.display = 'none';
+        }
+    
+})
+
+console.log(works);
+
 
 
 // //Get the button

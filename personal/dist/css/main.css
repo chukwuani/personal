@@ -1665,26 +1665,29 @@ label{
   height: 60px;
   margin-right: 0rem;
   margin-left: 0rem;
-  border: none;
+  background: transparent;
+  border: 1px solid var(--red-color);
   position: relative;
   transition: .40s ease-in-out;
   font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0.1rem;
 }
 
 .load-more:hover{
 color: #fff;
+transform: scale(1.0);
 }
 
 .load-more::after{
 content: '';
 position: absolute;
 height: 100%;
-width: 3px;
-border-radius: .2rem;
-bottom: -12px;
+width: 1px;
+border-radius: 0rem;
+bottom: 0px;
 left: 0;
 top: 0;
 display: block;
@@ -1699,14 +1702,19 @@ content: '';
 position: absolute;
 height: 100%;
 width: 100%;
-border-radius: .2rem;
-bottom: -12px;
+border-radius: 0rem;
+bottom: 0px;
 left: 0;
 top: 0;
 display: block;
 background: var(--red-color);
 opacity: 1;
 z-index: -1;
+}
+
+.load{
+  display: none;
+  transition: all .30s ease-in-out;
 }
 
   /*about*/ 
