@@ -250,7 +250,7 @@ label{
 
 .download-btn{
     color: #000;
-    padding: 9px 30px;
+    padding: 9px 25px;
     letter-spacing: 1px;
     font-size: 1rem;
     /* border-radius: .3rem; */
@@ -654,6 +654,59 @@ label{
   color: var(--blue-color);
 }
 
+.load-more{
+  color: #000;
+  padding: 9px 30px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  width: 200px;
+  height: 70px;
+  margin-right: 5rem;
+  margin-left: 1rem;
+  border: none;
+  position: relative;
+  transition: .40s ease-in-out;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.load-more:hover{
+color: #fff;
+}
+
+.load-more::after{
+content: '';
+position: absolute;
+height: 100%;
+width: 3px;
+border-radius: .2rem;
+bottom: -12px;
+left: 0;
+top: 0;
+display: block;
+background: var(--red-color);
+opacity: 0.5;
+transition: all .50s ease-in-out;
+}
+
+
+.load-more:hover::after{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+border-radius: .2rem;
+bottom: -12px;
+left: 0;
+top: 0;
+display: block;
+background: var(--red-color);
+opacity: 1;
+z-index: -1;
+}
 
 
 /* ABOUT STYLE */
@@ -1458,6 +1511,10 @@ label{
 
 
 /* portfolio */
+.portfolio-section{
+  margin-bottom: 3rem;
+}
+
 .portfolio-text{
   font-size: 1.35rem;
   margin-top: 5rem;
@@ -1597,6 +1654,59 @@ label{
   gap: 1rem;
   align-items: center;
   justify-content: center;
+}
+
+.load-more{
+  color: #000;
+  padding: 9px 30px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  width: 180px;
+  height: 60px;
+  margin-right: 0rem;
+  margin-left: 0rem;
+  border: none;
+  position: relative;
+  transition: .40s ease-in-out;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more:hover{
+color: #fff;
+}
+
+.load-more::after{
+content: '';
+position: absolute;
+height: 100%;
+width: 3px;
+border-radius: .2rem;
+bottom: -12px;
+left: 0;
+top: 0;
+display: block;
+background: var(--red-color);
+opacity: 0.5;
+transition: all .50s ease-in-out;
+}
+
+
+.load-more:hover::after{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+border-radius: .2rem;
+bottom: -12px;
+left: 0;
+top: 0;
+display: block;
+background: var(--red-color);
+opacity: 1;
+z-index: -1;
 }
 
   /*about*/ 
