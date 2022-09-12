@@ -18,25 +18,40 @@ function vanish(){
 }
 
 const loadBtn = document.querySelector(".load-more");
-const works = document.querySelectorAll(".load")
-let currentItem = 0;
 
-loadBtn.addEventListener('click', function(){
-    for(var i = currentItem; i < currentItem + 3; i++){
-        if(works[i]){
-            works[i].style.display = 'block';
-        }
-    }
+loadBtn.addEventListener('click', loading)
 
-    currentItem += 0;
+function loading(){
+    var works = document.querySelector(".portfolio-main");
+
+    works.classList.toggle('loaded')
+    loadBtn.classList.toggle('less')
     
-        if(currentItem <= works.length){
-            loadBtn.style.display = 'none';
-        }
-    
-})
+}
 
-console.log(works);
+
+
+
+// const loadBtn = document.querySelector(".load-more");
+// const works = document.querySelectorAll(".load")
+// let currentItem = 0;
+
+// loadBtn.addEventListener('click', function(){
+//     for(var i = currentItem; i < currentItem + 3; i++){
+//         if(works[i]){
+//             works[i].style.display = 'block';
+//         }
+//     }
+
+//     currentItem += 0;
+    
+//         if(currentItem <= works.length){
+//             loadBtn.style.display = 'none';
+//         }
+    
+// })
+
+// console.log(works);
 
 
 
