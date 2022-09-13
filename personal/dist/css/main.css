@@ -61,6 +61,7 @@ main{
     color: var(--red-color);
 }
 
+
 .loader{
   display: flex;
   align-items: center;
@@ -1485,7 +1486,7 @@ label{
 
 .portfolio{
   width: 85vw;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .left, .right{
@@ -1617,7 +1618,7 @@ label{
   height: 60px;
   margin-right: 0rem;
   margin-left: 0rem;
-  margin-top: 3rem;
+  margin-top: 4.5rem;
   border: none;
   background: 1px solid var(--red-color);
   position: relative;
