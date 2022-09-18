@@ -30,6 +30,42 @@ function loading(){
 }
 
 
+const left = document.querySelector(".left")
+const right = document.querySelector(".right")
+const portfolio = document.querySelector(".portfolio-main")
+
+right.addEventListener('click', function(){
+    if(portfolio.children[0]){
+        portfolio.style.cssText= "transform: translatex(-1018px);"
+     }
+         if(portfolio.children[1]){
+         portfolio.style.cssText= "transform: translatex(-2036px);"
+     }  
+      
+       if(portfolio.children[2]){
+         portfolio.style.cssText= "transform: translatex(-3054px);"
+     }  
+      
+        if(portfolio.children[3]){
+         portfolio.style.cssText= "transform: translatex(-4072px);"
+     }  
+      
+      if(portfolio.children[4]){
+        right.style.cssText= "opacity: 0.2;"
+    }
+    left.style.cssText= "opacity: 1;"
+    
+ 
+})
+
+left.addEventListener('click', function(){
+    if (portfolio.children[0]) {
+        left.style.cssText= "opacity: 0.2;"
+    }
+ 
+    portfolio.style.cssText += "transform: translatex(0px);"
+    right.style.cssText= "opacity: 1;"
+})
 
 
 // const loadBtn = document.querySelector(".load-more");
@@ -100,19 +136,5 @@ function loading(){
 //     document.execCommand('copy');
 //     alert(window.getSelection().toString());
 //   }
-
-const left = document.querySelector(".left")
-const right = document.querySelector(".right")
-const portfolio = document.querySelector(".portfolio-main")
-
-left.onclick = function(){
-    portfolio.style.cssText += "transform: translatex(0px);";
-}
-
-right.onclick = function(){
-    portfolio.style.cssText= "transform: translatex(-1018px);";
-}
-
-
 
 
