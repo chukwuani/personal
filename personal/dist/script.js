@@ -22,10 +22,16 @@ const loadBtn = document.querySelector(".load-more");
 loadBtn.addEventListener('click', loading)
 
 function loading(){
-    var works = document.querySelector(".portfolio-main");
 
-    works.classList.toggle('loaded')
     loadBtn.classList.toggle('less')
+    const works = document.querySelectorAll(".load");
+
+    for (const load of works) {
+       load.classList.toggle('loaded')
+    }
+
+    // works.classList.toggle('loaded')
+   
     
 }
 

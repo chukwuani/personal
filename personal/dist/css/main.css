@@ -1720,14 +1720,11 @@ opacity: 1;
   }
 
 .load{
-   height: 2650px;
-   overflow: hidden;
-   transition: all .40s ease-in-out;
+display: none;
 }
 
 .loaded{
-  height: auto;
-  transition: all .40s ease-in-out;
+display: block;
 }
 
   /*about*/ 
@@ -1820,6 +1817,7 @@ form{
 
 .input{
   width: 100%;
+  margin-bottom: 50px;
 }
 
 textarea{
@@ -1841,7 +1839,7 @@ font-size: 0.9rem;
 .button{
   width: 220px;
   color: #fff !important;
-  margin-top: 40px;
+  margin-top: 50px;
   border: none;
   background: var(--red-color);
   border-radius: 0.1rem;
