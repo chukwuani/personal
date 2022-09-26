@@ -274,7 +274,7 @@ label{
   border-radius: .2rem;
   bottom: -12px;
   right: 0;
-  bottom: 0;
+  bottom: 2px;
   display: block;
   background: var(--red-color);
   opacity: 0.5;
@@ -288,7 +288,7 @@ label{
   height: 100%;
   width: 100%;
   border-radius: .2rem;
-  bottom: 0;
+  bottom: 2px;
   right: 0;
   display: block;
   background: var(--red-color);
