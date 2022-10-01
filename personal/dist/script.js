@@ -17,33 +17,17 @@ function vanish(){
     
 }
 
-const loadBtn = document.querySelector(".load-more");
-
-loadBtn.addEventListener('click', loading)
-
-function loading(){
-
-    loadBtn.classList.toggle('less')
-    const works = document.querySelectorAll(".load");
-
-    for (const load of works) {
-       load.classList.toggle('loaded')
-    }
-
-    // works.classList.toggle('loaded')
-   
-    
-}
-
-
 const left = document.querySelector(".left")
 const right = document.querySelector(".right")
 const portfolio = document.querySelector(".portfolio")
 const portfolioMain = document.querySelector(".portfolio-main")
+const slide = document.querySelector(".slide")
 
 right.addEventListener('click', () => {
   
-    portfolio.scrollLeft += 1018;
+    const slideWidth = slide.clientWidth + 48;
+    portfolio.scrollLeft += slideWidth;
+    // portfolio.scrollLeft += 1018;
 
     // right.style.cssText= "opacity: 0.2;"
     // left.style.cssText= "opacity: 1;"
@@ -51,12 +35,35 @@ right.addEventListener('click', () => {
 })
 
 left.addEventListener('click', function(){
-    
-    portfolio.scrollLeft -= 1018;
+
+    const slideWidth = slide.clientWidth + 48;
+     portfolio.scrollLeft -= slideWidth;
+    // portfolio.scrollLeft -= 1018;
     
     // right.style.cssText= "opacity: 1;"
    // left.style.cssText= "opacity: 0.2;"
 })
+
+// const loadBtn = document.querySelector(".load-more");
+
+// loadBtn.addEventListener('click', loading)
+
+// function loading(){
+
+//     loadBtn.classList.toggle('less')
+//     const works = document.querySelectorAll(".load");
+
+//     for (const load of works) {
+//        load.classList.toggle('loaded')
+//     }
+
+//     // works.classList.toggle('loaded')
+   
+    
+// }
+
+
+
 
 
 

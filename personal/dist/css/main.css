@@ -1498,7 +1498,9 @@ label{
 
 /* portfolio */
 .portfolio-section{
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
+  height: 1200px;
+  position: relative;
 }
 
 .portfolio-text{
@@ -1508,7 +1510,7 @@ label{
   text-align: center;
 }
 
-.portfolio-main{
+/* .portfolio-main{
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -1521,16 +1523,58 @@ label{
 .portfolio{
   width: 85vw;
   overflow: hidden;
+} */
+
+.portfolio-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.left, .right{
-  display: none;
+.moving-portfolio{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.portfolio{
+  overflow: scroll;
+  width: 85vw;
+}
+
+.portfolio-main{
+  width: max-content;
+  max-width: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all .50s ease-in-out;
+  padding: 0;
+}
+
+
+.left{
+  position: absolute;
+  bottom: 40px;
+  margin-right: 3rem;
+}
+.right{
+  position: absolute;
+  bottom: 40px;
+  margin-left: 3rem;
 }
 
 .first-work{
   display: flex;
   flex-direction: column;
-  max-width: 100% ;
+  width: 85vw ;
   background: #f5f5f5;
   margin-bottom: 5rem;
   transition: 0.50s ease-in-out;
@@ -1540,7 +1584,7 @@ label{
 .second-work{
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 85vw ;
   background: #f5f5f5;
   margin-bottom: 5rem;
   transition: 0.50s ease-in-out;
@@ -1719,13 +1763,13 @@ opacity: 1;
   opacity: 1;
   }
 
-.load{
+/* .load{
 display: none;
 }
 
 .loaded{
 display: block;
-}
+} */
 
   /*about*/ 
 .about-main{
