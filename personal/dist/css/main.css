@@ -1568,14 +1568,14 @@ label{
   position: absolute;
   bottom: 0px;
   margin-right: 6rem;
-  border: 1.5px solid;
+  border: 1px solid;
   border-radius: 60px;
 }
 .right{
   position: absolute;
   bottom: 0px;
   margin-left: 6rem;
-  border: 1.5px solid;
+  border: 1px solid;
   border-radius: 60px;
 }
 
