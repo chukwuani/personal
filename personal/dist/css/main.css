@@ -129,11 +129,28 @@ header{
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(245, 245, 245, 0.3);
+    background-color: #fff;
     position: fixed;
     z-index: 10000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    transition: all .40s ease-in-out;
+    padding-top: 10px;
+}
+
+.actived{
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(245, 245, 245, 0.3);
+  position: fixed;
+  z-index: 10000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all .40s ease-in-out;
+  padding-top: 10px;
 }
 
 .menu{
@@ -664,6 +681,8 @@ label{
 
 .text h2{
   margin-bottom: 2rem;
+  font-size: 18.72px;
+  font-weight: bolder;
 }
 
 .text h3{
@@ -677,6 +696,8 @@ label{
 
 .second-text h2{
   margin-bottom: 2rem;
+  font-size: 18.72px;
+  font-weight: bolder;
 }
 
 .second-text h3{
@@ -831,7 +852,7 @@ label{
     background: transparent;
     border-bottom: 1px solid #bfbfbf;
     margin-bottom: 30px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     resize: none;
     outline: none;
     font-size: 0.9rem;
@@ -885,7 +906,7 @@ label{
     background: transparent;
     border-bottom: 1px solid #bfbfbf;
     margin-bottom: 10px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     resize: none;
     outline: none;
     box-shadow: none;
@@ -1349,12 +1370,23 @@ body{
 
 header{
     width: 100vw;
+    background-color: #fff;
     position: fixed;
-    background-color: rgb(245, 245, 245, 0.3);
     z-index: 10000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    transition: all .40s ease-in-out;
 }
+
+.actived{
+background-color: rgb(245, 245, 245, 0.3);
+position: fixed;
+z-index: 10000;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+transition: all .40s ease-in-out;
+}
+
 .logo{
     font-size: 1.7rem;
     margin-left: 2rem;
@@ -1568,14 +1600,14 @@ label{
   position: absolute;
   bottom: 0px;
   margin-right: 6rem;
-  border: 1px solid;
+  border: 0.5px solid;
   border-radius: 60px;
 }
 .right{
   position: absolute;
   bottom: 0px;
   margin-left: 6rem;
-  border: 1px solid;
+  border: 0.5px solid;
   border-radius: 60px;
 }
 
@@ -1878,14 +1910,14 @@ textarea{
   border: transparent;
   border-bottom: 1px solid #bfbfbf;
   margin-bottom: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   resize: none;
 }
 
 ::placeholder{
 font-family:  'Comfortaa', cursive;
 opacity: 0.8;
-font-size: 0.9rem;
+font-size: 0.8rem;
 }
 
 .button{

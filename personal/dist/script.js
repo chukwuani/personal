@@ -44,6 +44,19 @@ left.addEventListener('click', function(){
    // left.style.cssText= "opacity: 0.2;"
 })
 
+const headerBg = document.querySelector("header");
+console.log(headerBg);
+
+var scrollTrigger = 60;
+
+window.onscroll = function() {
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+    headerBg.classList.add("actived");
+  } else {
+    headerBg.classList.remove("actived");
+  }
+};
+
 // const loadBtn = document.querySelector(".load-more");
 
 // loadBtn.addEventListener('click', loading)
