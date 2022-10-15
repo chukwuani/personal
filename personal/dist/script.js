@@ -23,30 +23,22 @@ const portfolio = document.querySelector(".portfolio")
 const portfolioMain = document.querySelector(".portfolio-main")
 const slide = document.querySelector(".slide")
 
+
 right.addEventListener('click', () => {
-  
     const slideWidth = slide.clientWidth + 48;
     portfolio.scrollLeft += slideWidth;
-    // portfolio.scrollLeft += 1018;
-
-    // right.style.cssText= "opacity: 0.2;"
-    // left.style.cssText= "opacity: 1;"
-    
+    console.log(portfolio.scrollLeft);
 })
+
 
 left.addEventListener('click', function(){
-
-    const slideWidth = slide.clientWidth + 48;
-     portfolio.scrollLeft -= slideWidth;
-    // portfolio.scrollLeft -= 1018;
-    
-    // right.style.cssText= "opacity: 1;"
-   // left.style.cssText= "opacity: 0.2;"
+  const slideWidth = slide.clientWidth + 48;
+  portfolio.scrollLeft -= slideWidth;
+  console.log(portfolio.scrollLeft);
 })
 
-const headerBg = document.querySelector("header");
-console.log(headerBg);
 
+const headerBg = document.querySelector("header");
 var scrollTrigger = 60;
 
 window.onscroll = function() {
@@ -54,6 +46,24 @@ window.onscroll = function() {
     headerBg.classList.add("actived");
   } else {
     headerBg.classList.remove("actived");
+  }
+};
+
+portfolio.onscroll = function() {
+  const slideWidth = slide.clientWidth + 48;
+  var scrollTrigger = slideWidth * 4;
+
+  if (portfolio.scrollLeft === 0) {
+    left.style.cssText= "opacity: 0.2; transform: translateX(-10px);"
+  }
+  else{
+    left.style.cssText= "opacity: 1; cursor: pointer;"
+  }
+  if (portfolio.scrollLeft >= 4072) {
+    right.style.cssText= "opacity: 0.2; cursor: default; transform: translateX(-10px);"
+  }
+  else{
+    right.style.cssText= "opacity: 1;"
   }
 };
 
@@ -94,7 +104,7 @@ window.onscroll = function() {
 //     currentItem += 0;
     
 //         if(currentItem <= works.length){
-//             loadBtn.style.display = 'none';
+//             loadBtn.style.display = 'default';
 //         }
     
 // })
@@ -113,7 +123,7 @@ window.onscroll = function() {
 //   if (document.body.scrollTop > 3500 || document.documentElement.scrollTop > 3500) {
 //     mybutton.style.display = "flex";
 //   } else {
-//     mybutton.style.display = "none";
+//     mybutton.style.display = "default";
 //   }
 // }
 

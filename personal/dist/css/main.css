@@ -513,7 +513,8 @@ label{
   cursor: pointer;
   border: none;
   border-radius: 0px;
-  /* opacity: 0.2; */
+  opacity: 0.2;
+  cursor: default;
 }
 
 .left:hover{
