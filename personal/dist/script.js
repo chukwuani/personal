@@ -59,7 +59,7 @@ portfolio.onscroll = function() {
   else{
     left.style.cssText= "opacity: 1; cursor: pointer;"
   }
-  if (portfolio.scrollLeft >= 4072) {
+  if (portfolio.scrollLeft >= scrollTrigger) {
     right.style.cssText= "opacity: 0.2; cursor: default; transform: translateX(-10px);"
   }
   else{
