@@ -76,7 +76,7 @@ main{
 }
 
 
-::-webkit-scrollbar{
+.portfolio::-webkit-scrollbar{
    display: none;
 }
 
