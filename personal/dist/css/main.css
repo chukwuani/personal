@@ -21,6 +21,7 @@ body{
     animation-name: mybody;
     animation-duration: 3s;
     animation-timing-function: ease;
+    overflow-x: hidden;
 }
 
 main{
@@ -74,9 +75,8 @@ main{
   z-index: 99999999;
 }
 
-
-::-webkit-scrollbar{
-   display: none;
+.portfolio::-webkit-scrollbar{
+  display: none;
 }
 
 #click{
@@ -144,7 +144,7 @@ header{
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(245, 245, 245, 0.3);
+  background-color: rgba(245, 245, 245, 0.3);
   position: fixed;
   z-index: 10000;
   backdrop-filter: blur(20px);
@@ -262,7 +262,7 @@ label{
 .logo{
     color: #000;
     font-size: 2rem;
-    margin-left: 5rem;
+    margin-left: 7rem;
     font-family: 'Sacramento', cursive;
 }
 
@@ -273,7 +273,7 @@ label{
     font-size: 0.85rem;
     /* border-radius: .3rem; */
     margin-right: 5rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
     border: none;
     position: relative;
     transition: .40s ease-in-out;
@@ -294,7 +294,7 @@ label{
   bottom: 2px;
   display: block;
   background: var(--red-color);
-  opacity: 0.5;
+  opacity: 0;
   transition: all .50s ease-in-out;
 }
 
@@ -366,6 +366,10 @@ label{
   opacity: 0.2;
 } */
 
+.social-cto{
+  pointer-events: none;
+}
+
 .main-text{
     font-family: 'Comfortaa', cursive;
     font-size: 4rem;
@@ -378,7 +382,6 @@ label{
 .home-main{
     display: flex;
     align-items: center;
-    gap: 1.5em;
     flex-direction: row-reverse;
     background: #fff;
 }
@@ -1007,6 +1010,14 @@ label{
     /* margin: 3rem; */
 }
 
+.icon-close{
+  display: none;
+}
+
+.social-list{
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
     body{
         overflow-x: hidden;
@@ -1380,6 +1391,7 @@ header{
 }
 
 .actived{
+width: 100vw;
 background-color: rgb(245, 245, 245, 0.3);
 position: fixed;
 z-index: 10000;
@@ -1403,25 +1415,37 @@ label{
     height: 30px;
     width: 30px;
     margin-right: 2rem;
+    cursor: pointer;
 }
 
-#click:checked ~ .navbar{
+/* #click:checked ~ .navbar{
     left: 0;
+} */
+
+.closed{
+  left: 0% !important;
+  position: fixed;
+  top: 0;
 }
 
 .navbar{
     display: block;
     position: fixed;
-    top: 4rem;
+    top: 0;
     left: -100%;
-    height: 300px;
+    height: auto;
+    padding: 78px;
     width: 100vw;
-    background-color: rgb(253, 251, 251, 0.9)!important;
+    background-color: #f5f5f5!important;
     z-index: 10000;
-    backdrop-filter: blur(20px)!important;
-    -webkit-backdrop-filter: blur(20px)!important;
     text-align: center;
     transition: all 1s ease-in-out;
+}
+
+.icon-close{
+  margin-left: 60vw;
+  display: block;
+  cursor: pointer;
 }
 
 .navbar li{
@@ -1430,8 +1454,15 @@ label{
 
 .download-btn{
     display: inline-block;
-    margin: 20px 0;
-    
+    margin: 0;
+    background-color: #D8664D;
+    border-radius: .3rem; 
+    padding: 15px 30px;
+    color: #fff !important;
+}
+
+.download-btn::after{
+  display: none;
 }
 
 .footer-copy{
@@ -1480,7 +1511,7 @@ label{
     font-size: 0.9rem;
     color: rgb(82, 79, 79);
     text-align: center;
-    padding: 25px;
+    padding: 33px;
   }
 
   .arrow{
@@ -1604,12 +1635,21 @@ label{
   border: 0.5px solid;
   border-radius: 60px;
 }
+
+.left:hover{
+  transform: translate(0px);
+}
+
 .right{
   position: absolute;
   bottom: 0px;
   margin-left: 6rem;
   border: 0.5px solid;
   border-radius: 60px;
+}
+
+.right:hover{
+  transform: translate(0px);
 }
 
 .first-work{
@@ -1819,6 +1859,7 @@ display: block;
   align-items: center;
   justify-content: center;
   padding: 0px;
+  margin-top: 6rem;
 }
 
 .about-me{
@@ -1886,7 +1927,7 @@ display: block;
 
 form{
   display: flex;
-  width: 87vw;
+  width: 85vw;
   height: auto;
   margin-right: 0rem;
   margin-left: 0rem;
@@ -1903,6 +1944,7 @@ form{
 .input{
   width: 100%;
   margin-bottom: 50px;
+  padding: 0.5rem 1rem;
 }
 
 textarea{
@@ -1911,20 +1953,21 @@ textarea{
   border: transparent;
   border-bottom: 1px solid #bfbfbf;
   margin-bottom: 10px;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   resize: none;
 }
 
 ::placeholder{
 font-family:  'Comfortaa', cursive;
 opacity: 0.8;
-font-size: 0.8rem;
+font-size: 0.9rem;
 }
 
 .button{
   width: 220px;
   color: #fff !important;
   margin-top: 50px;
+  margin-bottom: 50px;
   border: none;
   background: var(--red-color);
   border-radius: 0.3rem;
@@ -1966,7 +2009,7 @@ font-size: 0.8rem;
 }
 
 .contact-socials{
-  display: flex;
+  display: none;
   flex-direction: row;
   margin-top: 50px;
   width: 100vw;
@@ -1994,4 +2037,52 @@ footer{
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+.social-list{
+  width: 80vw;
+  color: #000;
+  background-color: #fff;
+  padding: 78px;
+  border-radius: .3rem;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+text-align: center;
+text-transform: capitalize;
+}
+
+.social-modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(245, 245, 245, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  transition: all .30s ease-in-out;
+}
+
+.social{
+  display: flex !important;
+  position: fixed;
+}
+
+.contact-main{
+  position: relative;
+}
+
+.social-cto{
+  color: #D8664D !important;
+  cursor: pointer;
+  pointer-events: all;
+}
+
 }

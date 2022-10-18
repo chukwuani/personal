@@ -51,7 +51,7 @@ window.onscroll = function() {
 
 portfolio.onscroll = function() {
   const slideWidth = slide.clientWidth + 48;
-  var scrollTrigger = slideWidth * 4;
+  var scrollTrigger = slideWidth * 3.5;
 
   if (portfolio.scrollLeft === 0) {
     left.style.cssText= "opacity: 0.2; transform: translateX(-10px);"
@@ -66,6 +66,35 @@ portfolio.onscroll = function() {
     right.style.cssText= "opacity: 1;"
   }
 };
+
+  const closing = document.querySelector(".icon-close");
+  const navBar = document.querySelector(".navbar");
+  const menu = document.querySelector(".menu");
+
+  closing.addEventListener("click", closer);
+  menu.addEventListener("click", opened)
+
+  function closer(){
+    navBar.classList.remove("closed")
+  }
+
+  function opened(){
+    navBar.classList.add("closed")
+  }
+
+
+  const cto = document.querySelector(".social-cto");
+  const list = document.querySelector(".social-modal");
+
+  cto.addEventListener("click", social)
+
+  function social(){
+    list.classList.add("social")
+  }
+
+  list.addEventListener("click", function(){
+    list.classList.remove("social")
+  })
 
 // const loadBtn = document.querySelector(".load-more");
 
