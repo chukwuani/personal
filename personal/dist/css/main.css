@@ -34,23 +34,6 @@ main{
   position: relative;
 }
 
-/* .scroll-down{
-  height: 50px;
-  width: 50px;
-  border-radius: .3rem;
-  background: var(--main-color);
-  position: fixed;
-  left: 95vw;
-  top: 90vh;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  animation: bounce 1s alternate ease-in-out infinite;
-  transition: 1s ease-in-out;
-} */
-
-
 .scroll{
   height: 40px;
   width: 40px;
@@ -190,30 +173,6 @@ label{
   border-radius: .2rem;
 } 
 
-/* .two::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  bottom: -10px;
-  left: 0;
-  display: block;
-  background: var(--yellow-color);
-  transition: ease-in-out .40s;
-} 
-
-.three::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  bottom: -10px;
-  left: 0;
-  display: block;
-  background: var(--blue-color);
-  transition: ease-in-out .40s;
-}  */
-
 .nav-item:hover::after{
   content: '';
   position: absolute;
@@ -225,29 +184,6 @@ label{
   display: block;
   background: var(--red-color);
 }
-/* 
-.two:hover::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  bottom: -10px;
-  left: 0;
-  display: block;
-  background: var(--yellow-color);
-}
-
-.three:hover::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  bottom: -10px;
-  left: 0;
-  display: block;
-  background: var(--blue-color);
-} */
-
 
 .active::before{
   content: '';
@@ -272,7 +208,6 @@ label{
     padding: 9px 20px;
     letter-spacing: 1px;
     font-size: 0.85rem;
-    /* border-radius: .3rem; */
     margin-right: 5rem;
     margin-left: 0rem;
     border: none;
@@ -316,57 +251,6 @@ label{
 
 
 /*HOME STYLE*/
-/* .home-span{
-  position: relative;
-}
-
-.home-span::after{
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 25%;
-  border-radius: .3rem;
-  bottom: -12px;
-  left: 0;
-  display: block;
-  background: var(--red-color);
-  opacity: 0.2;
-} */
-
-/* .build-span{
-  position: relative;
-}
-
-.build-span::after{
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 20%;
-  border-radius: .3rem;
-  bottom: 0px;
-  left: 0%;
-  display: block;
-  background: var(--red-color);
-  opacity: 0.2;
-}
-
-.web-span{
-  position: relative;
-}
-
-.web-span::after{
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 40%;
-  border-radius: .3rem;
-  bottom: 0px;
-  left: 0;
-  display: block;
-  background: var(--red-color);
-  opacity: 0.2;
-} */
-
 .social-cto{
   pointer-events: none;
 }
@@ -879,31 +763,6 @@ label{
     border-bottom: 1px solid var(--red-color);
   }
   
-/*   .label{
-    font-size: .9rem;
-    font-family:  'Comfortaa', cursive;
-    display: block;
-    padding: 0.5rem 1rem;
-    pointer-events: none;
-    position: relative;
-    transform: translateY(-90px);
-    transition: all 500ms ease-in-out;
-    opacity: 0.8;
-  } */
-
-/*   .message{
-    font-size: .9rem;
-    font-family:  'Comfortaa', cursive;
-    display: block;
-    padding: 0.5rem 1rem;
-    pointer-events: none;
-    position: relative;
-    transform: translateY(-140px);
-    transition: all 500ms ease-in-out;
-    opacity: 0.8;
-  } */
-  
-  
   textarea{
     max-width: 500px;
     height: 120px;
@@ -937,7 +796,6 @@ label{
     margin-top: 20px;
     cursor: pointer;
     position: relative;
-    /* animation: bounce 1s alternate infinite ease-in-out; */
   }
   
   .button:hover{
@@ -1419,10 +1277,6 @@ label{
     cursor: pointer;
 }
 
-/* #click:checked ~ .navbar{
-    left: 0;
-} */
-
 .closed{
   left: 0% !important;
   position: fixed;
@@ -1567,7 +1421,6 @@ label{
 
 /* portfolio */
 .portfolio-section{
-  /* margin-bottom: 6rem; */
   height: 1200px;
   position: relative;
 }
@@ -1578,21 +1431,6 @@ label{
   margin-bottom: 5rem;
   text-align: center;
 }
-
-/* .portfolio-main{
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-}
-
-.portfolio{
-  width: 85vw;
-  overflow: hidden;
-} */
 
 .portfolio-section{
   display: flex;
@@ -1844,14 +1682,6 @@ opacity: 1;
   height: 100%;
   opacity: 1;
   }
-
-/* .load{
-display: none;
-}
-
-.loaded{
-display: block;
-} */
 
   /*about*/ 
 .about-main{
